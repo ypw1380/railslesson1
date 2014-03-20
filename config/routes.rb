@@ -1,5 +1,8 @@
 Project::Application.routes.draw do
   get '/' => "home#index"
+  get '/post' => "home#post"
+  get '/test' => "home#test"
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,28 +1,41 @@
-class Animal
-  attr_reader :type, :limbs, :eyes, :blood, :diet
+class Computer
+  attr_accessor :monitor,
+  attr_accessor :processor,
+  attr_accessor :memory
+
+  def initialize(monitor, processor, memory)
+    @monitor = monitor
+    @processor = processor
+    @memory = memory
+  end
+ 
+  def user
+    puts "Humans and other computers!"
+  end
+  
+
+  
+  class Tablet < Computer
+  
+  def portable
+    puts "I can be taken everywhere"
+  end
+end
+  
+  
+  class Smartphone < Computer
+  
+  def ringer
+    puts "Talk to me!"
+  end
 end
 
-bird = Animal.new("bird", 2, 2, "cold-blooded", "omnivore")
-bird.type
-bird.limbs
-bird.eyes
-bird.blood
-bird.diet
-
-whale = Animal.new("mammal", 0, 2, "warm-blooded", "omnivore")
-whale.type
-whale.limbs
-whale.eyes
-whale.blood
-whale.diet
-
-snake = Animal.new("reptile", 0, 2, "cold-blooded", "carnivore")
-snake.type
-snake.limbs
-snake.eyes
-snake.blood
-snake.diet
-
-parakeet = bird.new
-shamu = whale.new
-cobra = snake.new
+super_computer = Computer.new(0, "IBM", "100000MB")
+  super_computer.user
+  puts_super_computer
+  
+  my_iphone = Smartphone.new(4, "Intel", "32MB")
+  my_iphone.user
+  my_iphone.ringer
+  puts_my_iphone
+  
